@@ -1,5 +1,5 @@
-lst = ["apple", "banana", 15]  # A list can store unordered values, duplicated values. Syntax: []
-tpl = ("apple", "banana", 15)  # A tuple is like a list but immutable, meaning that it cannot be appended. Syntax: ()
+lst = ["apple", "banana", 15]  # A list can store unordered values and duplicated values. Syntax: []
+tpl = ("apple", "banana", 15)  # A tuple is like a list but immutable, meaning that it cannot be appended or otherwise changed. Syntax: ()
 st = {"apple", "banana", 15}  # A set is also like a list, but items cannot be duplicated and are unordered. Syntax: {}
 # These are datatypes that are able to store multiple items. They are separated by ','.
 
