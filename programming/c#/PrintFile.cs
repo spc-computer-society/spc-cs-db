@@ -7,9 +7,13 @@ namespace Program
     {
         static void Main(string[] args)
         {
+            string currentDir = Directory.GetCurrentDirectory();
+            string parentDir = Path.Combine(currentDir, "..");
+            string path = parentDir + "\\_common\\PrinText.txt";
+            
             try
             {
-                using (StreamReader sr = new StreamReader("../_common/PrintText.txt"))
+                using (StreamReader sr = new StreamReader(path))
                 {
                     string txt = sr.ReadToEnd();
                     Console.WriteLine(txt);
