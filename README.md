@@ -1,3 +1,3 @@
-# SPC Computer Society Data Base
+# SPC Computer Society Knowledge Base
 
 For internal use only.
