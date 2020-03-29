@@ -38,6 +38,11 @@ namespace Hello
             Console.WriteLine("BEEP BEEP");
         }
 
+        public override void DisplayType() //Override parent class function
+        {
+            Console.WriteLine("Car");
+        }
+
         public Car(string aName, double aWeight, string aHonkSound = "BEEP", string aBrand = "Toyota", string aType = "Car") : base(aType) //Constructor
         {
             Name = aName;

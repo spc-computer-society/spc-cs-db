@@ -14,5 +14,10 @@ namespace Hello
         {
             Type = aType;
         }
+
+        public void DisplayType()
+        {
+            Conosle.WriteLine(Type);
+        }
     }
 }
