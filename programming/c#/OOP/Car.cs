@@ -2,7 +2,7 @@
 
 namespace Hello
 {
-    class Car : Vehicle //Car class is a derived/child/sub class of Vehicle class
+    class Car : Vehicle //Car class is a derived/child/sub class of Vehicle class (Inheritance)
     {
         public string Name { get; private set; } //public getter and private setter
 
