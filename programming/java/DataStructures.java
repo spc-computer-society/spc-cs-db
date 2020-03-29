@@ -20,6 +20,8 @@ public class DataStructures{
     List<Integer> sub = list.subList(1,sub.size());//Sublist contains 2;
     sub.forEach(System.out::println);
     
+
+    //Maps map a key to a value, and does not allow duplicate keys
     Map<String,Integer> ids = new HashMap<>();
     ids.put("Bash",30624700);
     ids.put("Patchy",30624770);

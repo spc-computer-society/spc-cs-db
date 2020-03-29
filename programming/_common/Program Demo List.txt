@@ -1,6 +1,7 @@
 1. Hello World - print out "Hello World!"
-2. Print all lines in a File - print out all the text in a file
+2. Print File - print out all the text in a file
 3. Datatype - initialize and print out boolean(true), integer(59), float/double(69.420), character(D), string(I love ICT.)
-4. Calculator - calculate and print out addition, subtraction, multiplication, division, remainder of 420 and 69
-5. Datatype(Advanced) - initialize and print out unique datatypes of their corresponding languages(e.g. list, array)
-6. Function - input and print out a person's(Charles) personal information using a function.
+4. Numericals - calculate and print out addition, subtraction, multiplication, division, remainder of 420 and 69
+5. Advance Datatype and Data Structures - initialize and print out unique datatypes of their corresponding languages(e.g. list, array)
+6. Function - input and print out a person's(Charles) personal information using a function, and maybe demo some unique function features.
+7. Comments - comment line and comment block
