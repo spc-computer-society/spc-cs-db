@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Hello
+namespace Program
 {
     class Car : Vehicle //Car class is a derived/child/sub class of Vehicle class (Inheritance)
     {
