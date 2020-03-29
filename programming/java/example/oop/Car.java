@@ -3,7 +3,7 @@ package spc.compsoc.example;
 public class Car{
   private String name;
   private String colour;
-  public Car(String nam,String colour){
+  public Car(String name,String colour){
     this.name = name;
     this.colour = colour;
   }
