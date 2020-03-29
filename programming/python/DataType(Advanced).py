@@ -12,14 +12,14 @@ print(tpl[1])
 print(st, type(st))
 # A set cannot be accessed through indexes since they are unordered. For loops are usually used in these cases.
 
-dictionary = {"apple": 5, "banana": 3, 15: 2.84, "item": [lst]}
+dictionary = {"apple": 5, "banana": 3, 15: 2.84, "item": lst}
 # A dictionary is a very useful datatype, which contains a key and a value separated by ':'.
 # Each pair is separated by ','.
 # The value of a dictionary can even be a list. This allows multiple values.
 
 print(dictionary, type(dictionary))
 print(dictionary["apple"])
-print(dictionary[3])
+print(dictionary[15])
 print(dictionary["item"][1])
 # This prints the value of key: item, which is a list.
 # The [1] prints the item with index(1) of the list
