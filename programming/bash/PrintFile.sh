@@ -1,1 +1,1 @@
-cat ../common/TextPrint.txt
+cat ../_common/TextPrint.txt
