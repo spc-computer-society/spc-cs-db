@@ -1,0 +1,15 @@
+//Inputs in the form of (ag^(c) + bh^(d)) ^ y
+? -> A:
+? -> B:
+? -> C:
+? -> D:
+? -> Y:
+0 -> X:
+While X <= Y:
+  (YCX)*(A^(Y-X))*(B^X)◢ //Which is Comb(Y,X) * pow(A,Y-X) * pow(B,X)
+  C * (Y-X)◢
+  DX◢
+  X + 1 -> X;
+WhileEnd:
+
+  
