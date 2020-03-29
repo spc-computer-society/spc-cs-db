@@ -4,3 +4,4 @@
 4. Numericals - calculate and print out addition, subtraction, multiplication, division, remainder of 420 and 69
 5. Advance Datatype and Data Structures - initialize and print out unique datatypes of their corresponding languages(e.g. list, array)
 6. Function - input and print out a person's(Charles) personal information using a function.
+7. Comments - comment line and comment block
