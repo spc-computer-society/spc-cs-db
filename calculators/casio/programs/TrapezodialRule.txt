@@ -1,4 +1,4 @@
-//Interesting techniques here: Simulate returns in a structured language and disassembling a for loop into ifs
+//Interesting techniques here: Simulate returns in a procedural language and disassembling a for loop into ifs
 1 -> Y:
 0 -> M:
 ? -> A:
