@@ -102,51 +102,6 @@ public class ReflectUtils {
     }
 
     /**
-     *
-     * @param p
-     * @param superclass
-     * @param toIgnore
-     * @param <T>
-     * @return
-     * @throws MalformedURLException
-     * @throws IOException
-     * @throws ClassNotFoundException
-     */
-    public static <T> Set<Class<T>> loadSubclasses(Path p,Class<T> superclass,List<String> toIgnore) throws MalformedURLException, IOException, ClassNotFoundException{
-        URLClassLoader url = URLClassLoader.newInstance(Files.walk(p).map(pth -> {
-            try {
-                return pth.toUri().toURL();
-            } catch (MalformedURLException ex) {
-                throw new IllegalArgumentException("Given path " + pth + " is malformed.");
-            }
-        }).toArray(URL[]::new));
-        Set<Class<T>> noDup = new HashSet<>();
-        for(Path ps : getJars(p)) {
-            List<String> toCheck = classNamesInJar(ps);
-            for (String s : toCheck) {
-                if(s.contains("module-info") || s.contains("org.apache.logging")){
-                    continue;
-                }
-                if (!toIgnore.isEmpty()) {
-                    for(String to : toIgnore){
-                        if(s.startsWith(to)){
-                            continue;
-                        }
-                    }
-                }
-                Class<?> cs = url.loadClass(s);
-                if (superclass.isAssignableFrom(cs)) {
-                    @SuppressWarnings("unchecked")
-                    //isAssignableFrom() guards that it is a subclass of T
-                    Class<T> cls = (Class<T>) cs;
-                    noDup.add(cls);
-                }
-            }
-        }
-        return noDup;
-    }
-
-    /**
      * Returns a list of concrete loaded subclasses from the given directors containing JAR files, with the specified superclass.
      * @param <T> The supertype to load; the type of the superclass
      * @param p The path to load classes from
@@ -163,26 +118,7 @@ public class ReflectUtils {
                 .filter(cls -> !cls.isAnonymousClass())
                 .collect(Collectors.toList());
     }
-
-    /**
-     *
-     * @param p
-     * @param superclass
-     * @param toIgnore
-     * @param <T>
-     * @return
-     * @throws MalformedURLException
-     * @throws IOException
-     * @throws ClassNotFoundException
-     */
-    public static <T> List<Class<T>> loadConcreteSubclasses(Path p,Class<T> superclass,List<String> toIgnore) throws MalformedURLException, IOException, ClassNotFoundException{
-        return loadSubclasses(p,superclass,toIgnore).stream().filter(cls -> !cls.isInterface())
-                .filter(cls -> !Modifier.isAbstract(cls.getModifiers()))
-                .filter(cls -> !cls.isSynthetic())
-                .filter(cls -> !cls.isAnonymousClass())
-                .collect(Collectors.toList());
-    }
-
+    
     /**
      * Provides a list of concrete subclasses to the given callback function.
      * @param p The path to load classes from
