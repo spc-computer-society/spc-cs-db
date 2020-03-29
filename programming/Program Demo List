@@ -1,4 +1,4 @@
 1. Hello World - print out "Hello World!"
-2. Print all lines in a File - print out all the text in a file "text.txt" with the content of "I love ICT (newline) SPC ghost story is scary"
+2. Print all lines in a File - print out all the text in a file
 3. Datatype - initialize and print out boolean(true), integer(59), float/double(69.420), character(D), string(I love ICT.)
 4. Calculator - calculate and print out addition, subtraction, mutiplication, division, remainder of 420 and 69
