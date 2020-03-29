@@ -1,0 +1,15 @@
+? -> A: 
+? -> B:
+? -> C:
+B^2 - 4AC -> D:
+If D < 0:
+  Then Goto 1:
+IfEnd:
+If A = 0:
+  Then A=0◢
+  Goto 1:
+IfEnd:
+(-B + sqrt(D)) / 2A -> X◢
+(-B - sqrt(D)) / 2A -> Y◢
+Lbl 1:
+D
