@@ -1,0 +1,22 @@
+Goto 1: 
+Lbl 0:
+For A→X To B Step D:
+  /*Your function Here */ →Y:
+  If(X=A)+(X=B)://Interesting use of OR in calc
+    Then YM+:
+    Else 2YM+:
+  IfEnd:
+Next:
+D◢
+.5DM◢
+Lbl 1:
+ClrMemory:
+?→A:
+?→B:
+?→C:
+C-1(B-A→D:
+Goto 0
+
+//Points of Interest:
+//The program inputs are done at the end, which reduces user's need to move the cursor too much to change the function
+//There is an interesting use of if conditionals
