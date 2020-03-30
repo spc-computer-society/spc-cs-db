@@ -54,9 +54,7 @@ public class ReflectUtils {
         try {
             cons = cls.getDeclaredConstructor();
             cons.setAccessible(true);
-        } catch (NoSuchMethodException ex) {
-            //additional logging?
-            System.out.println("lint");
+        } catch (NoSuchMethodException ex) {;
             return Optional.empty();
         } catch (SecurityException ex) {
             return Optional.empty();
