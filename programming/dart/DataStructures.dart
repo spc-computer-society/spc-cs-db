@@ -13,6 +13,6 @@ main() {
   var map = {"apple": 5, "banana": 15};  //This declares a map. It stores pairs of keys and values. It can contain lists too!
   print(map);
   print(map.runtimeType);
-  print(map["banana");
+  print(map["banana"]);
 
 }
