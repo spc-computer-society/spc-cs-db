@@ -17,7 +17,7 @@ public class DataStructures{
     for(int i : list){
       System.out.println(i + "\n");//1 and 2
     }
-    List<Integer> sub = list.subList(1,sub.size());//Sublist contains 2;
+    List<Integer> sub = list.subList(1,list.size());//Sublist contains 2;
     sub.forEach(System.out::println);
     
 
@@ -27,11 +27,11 @@ public class DataStructures{
     ids.put("Patchy",30624770);
     ids.put("Zaggy",514202);
     System.out.println(ids.get("Zaggy"));//Outputs 514202
-    System.out.println(ids.get("Zappies"));Outputs null
+    System.out.println(ids.get("Zappies"));//Outputs null
     System.out.println(ids.getOrDefault("Zappies",0));//Outputs 0
     System.out.println(ids.entrySet().stream().mapToInt(ent -> ent.getValue()).sum());//Returns sum of all ids
     
-    Queue<Long> l = new ArrayBlockingQueue<>();
+    Queue<Long> l = new ArrayBlockingQueue<>(5);
     l.add(1l);
     l.add(200l);
     System.out.println(l.peek());//outputs 1, in queue = {1,200}
