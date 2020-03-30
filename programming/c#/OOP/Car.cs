@@ -38,7 +38,7 @@ namespace Program
             Console.WriteLine("BEEP BEEP");
         }
 
-        public override void DisplayType() //Override parent class function
+        public override void DisplayType() //Override parent class function, use "new" modifier to not affect the parent function
         {
             Console.WriteLine("Car");
         }
