@@ -40,7 +40,7 @@ B◢
 D / 2 * (A + 2M + B)
 
 //This may seem convoluted, but is actually fairly simple
-//Lbl 5 is the function to trapezodial rule and a and b are the ranges
+//Lbl 5 is the function to trapezoidal rule and a and b are the ranges
 //We go to Lbl 5, which transforms X into the value of f(X)
 //The if below it is for returning to the correct position
 //As we can't goto in a loop (an annoying limitation), we simulate a while loop by using an if statement and goto(s)
