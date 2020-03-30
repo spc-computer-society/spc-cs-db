@@ -26,7 +26,7 @@ package com.colin.games.uno.api;
 public interface Savable {
 
     /**
-     * Retrieves the save form of this object.
+     * Gets the save form of this object.
      * @return The save string of this object
      */
     String saveForm();
