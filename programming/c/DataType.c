@@ -6,4 +6,9 @@ int main()
     float f = 3.53;
     char c[] = "This is a string";
     double d = 12367;
+    printf("%d\n",i);
+    printf("%f\n",f);
+    printf("%s\n",c);
+    printf("%lf",d);
+    return 0;
 }
