@@ -6,3 +6,4 @@
 6. Function - input and print out a person's(Charles) personal information using a function, and maybe demo some unique function features.
 7. Comments - comment line and comment block
 8. Classes (if applicatable) - A sample class to show OOP syntax
+9. Looping - Demonstrate what your langauge is special in terms of loops
