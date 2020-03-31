@@ -1,0 +1,66 @@
+alias --- sets aliases for commands  
+appimage --- another another universal linux package manager  
+apt --- package manager for Debian/Ubuntu based distros  
+cat --- reads and outputs content of a file  
+cd --- change directory  
+cfdisk --- Still another disk utility  
+cgdisk --- Thus another disk utility  
+chmod --- grants permission of a file  
+chown --- grants ownership of a file  
+chroot --- Accesses a mounted linux filesystem externally (e.g. from a live system)  
+clear --- clears your terminal interface  
+cp --- copy  
+curl --- another tool for retrieving files and information from the given url  
+dd --- disk destroyer  
+df --- shows information of your mounted partitions  
+dkpg --- unpacks and installs a .deb file(Debian/Ubuntu based distros only)  
+dnf/yum --- package manager for RHEL based distros  
+echo --- outputs the given string  
+efibootmgr --- Manager for booting (e.g. boot order, boot settings)  
+exit --- exits an interface (e.g. the terminal)  
+fdisk --- A disk utility  
+find --- finds a file directory  
+flatpak --- another universal linux package manager(mainly Linux Mint)  
+fsck --- checks the consistency of a file disk  
+gdisk --- Another disk utility  
+grep --- searches for a pattern of string in an output, often used with other commands with a “|” sign separating.  
+grub install --- installs grub  
+htop/top --- launches a live system monitor  
+ifconfig --- another utility for showing internet information(Older version of ip)  
+inxi --- shows information of your system  
+ip --- shows internet information  
+kill --- kills a particular process  
+killall --- kills all process regarding the process name  
+ls --- list, sometimes used with ls -al to show all hidden files in the form of a detailed list  
+lsblk --- list block devices  
+lspci --- list pci devices  
+lsusb --- list usb devices  
+man --- opens a manual of a command  
+mkdir --- create a new empty directory  
+mount --- mounts a partition  
+mv --- move  
+nano --- a cli-based user-friendly text editor  
+neofetch --- also shows information about your system (And a nice logo)  
+pacman --- package manager for Arch Linux based distros  
+parted --- Yet another disk utility  
+passwd --- changes unix password  
+ping --- receives ping with the given webpage, often used for testing internet connectivity  
+portage --- package manager for gentoo based distros  
+pwd --- present working directory, shows the path of your present directory  
+reboot --- reboots the computer  
+rm --- remove  
+rmdir --- remove an empty directory  
+shutdown --- shutdowns the computer  
+snap --- a universal linux package manager(mainly Ubuntu)  
+su --- switch user (default user is root)  
+sudo --- run a command of root privileges  
+tar --- uncompress a tarball file  
+touch --- creates an empty file  
+umount --- unmounts a partition  
+uname --- obtains primary information of your system  
+unzip --- uncompress a zip file  
+update-grub --- updates grub’s boot options  
+vim/vi --- a cli-based efficient(not beginner-friendly) text editor  
+wget --- grabs and downloads a file from the given url  
+whoami --- shows the current logged user  
+zypper --- package manager for Slackware based distros 
