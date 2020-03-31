@@ -1,0 +1,66 @@
+cd --- change directory  
+ls --- list, sometimes used with ls -al to show all hidden files in the form of a detailed list  
+pwd --- present working directory, shows the path of your present directory  
+whoami --- shows the current logged user  
+cp --- copy  
+rm --- remove  
+mv --- move  
+df --- shows information of your mounted partitions  
+dd --- disk destroyer  
+fdisk --- A disk utility  
+gdisk --- Another disk utility  
+parted --- Yet another disk utility  
+cfdisk --- Still another disk utility  
+cgdisk --- Thus another disk utility  
+lsblk --- list block devices  
+lsusb --- list usb devices  
+lspci --- list pci devices  
+sudo --- run a command of root privileges  
+su --- switch user (default user is root)  
+man --- opens a manual of a command  
+apt --- package manager for Debian/Ubuntu based distros  
+dnf/yum --- package manager for RHEL based distros  
+pacman --- package manager for Arch Linux based distros  
+zypper --- package manager for Slackware based distros  
+portage --- package manager for gentoo based distros  
+mkdir --- create a new empty directory  
+rmdir --- remove an empty directory  
+touch --- creates an empty file  
+cat --- reads and outputs content of a file  
+echo --- outputs the given string  
+nano --- a cli-based user-friendly text editor  
+vim/vi --- a cli-based efficient(not beginner-friendly) text editor  
+grep --- searches for a pattern of string in an output, often used with other commands with a “|” sign separating.  
+find --- finds a file directory  
+mount --- mounts a partition  
+umount --- unmounts a partition  
+fsck --- checks the consistency of a file disk  
+efibootmgr --- Manager for booting (e.g. boot order, boot settings)  
+update-grub --- updates grub’s boot options  
+grub install --- installs grub  
+kill --- kills a particular process  
+killall --- kills all process regarding the process name  
+exit --- exits an interface (e.g. the terminal)  
+passwd --- changes unix password  
+inxi --- shows information of your system  
+neofetch --- also shows information about your system (And a nice logo)  
+uname --- obtains primary information of your system  
+htop/top --- launches a live system monitor  
+alias --- sets aliases for commands  
+wget --- grabs and downloads a file from the given url  
+curl --- another tool for retrieving files and information from the given url  
+dkpg --- unpacks and installs a .deb file(Debian/Ubuntu based distros only)  
+clear --- clears your terminal interface  
+chmod --- grants permission of a file  
+chown --- grants ownership of a file  
+chroot --- Accesses a mounted linux filesystem externally (e.g. from a live system)  
+tar --- uncompress a tarball file  
+unzip --- uncompress a zip file  
+snap --- a universal linux package manager(mainly Ubuntu)  
+flatpak --- another universal linux package manager(mainly Linux Mint)  
+appimage --- another another universal linux package manager  
+ping --- receives ping with the given webpage, often used for testing internet connectivity  
+shutdown --- shutdowns the computer  
+reboot --- reboots the computer  
+ip --- shows internet information  
+ifconfig --- another utility for showing internet information(Older version of ip)  
