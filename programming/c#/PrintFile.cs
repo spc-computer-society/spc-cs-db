@@ -8,8 +8,9 @@ namespace Program
         static void Main(string[] args)
         {
             string currentDir = Directory.GetCurrentDirectory();
-            string parentDir = Path.Combine(currentDir, "..");
-            string path = parentDir + "\\_common\\PrinText.txt";
+            string currentDirInfo = new DirectoryInfo(currentDir)
+            string grandParentDir = currentDirInfo.Parent.Parent.FullName;
+            string path = grandParentDir + @"\_common\PrinText.txt";
             
             try
             {
