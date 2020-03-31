@@ -1,4 +1,6 @@
 package spc.compsoc.example;
+import java.util.List;
+import java.util.ArrayList;
 public class Looping{
   public static void main(String[] args){
     List<String> ls = new ArrayList<>();
