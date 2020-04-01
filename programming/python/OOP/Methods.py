@@ -4,7 +4,7 @@
 class Test:
     class_var = "This is a class variable."
 
-    def __init__(self, in_var):  # Constructor, or "initialization"/"initializer?".
+    def __init__(self, in_var):  # Constructor, or "initializer".
         self.in_var = in_var
 
     # These are instance methods lol. It takes in self as its first parameter.
