@@ -22,4 +22,5 @@ public class Looping{
     //Stream is not only limited to these methods, but also has other useful functions such as map and filter
     //See the standard library for details.
     //Note that this requires some knowledge of lambda functions
+  }
 }
