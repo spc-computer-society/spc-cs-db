@@ -6,6 +6,6 @@ client.once('ready',() =>{
 });
 client.on('message',message =>{
     if(message.content === 'Eric...'){
-        return message.channel.send("Hello, this is Eric, from Indian Tech Support!");
+        return message.channel.send("Hello, this is Eric, from Indian Tech Support!!");
     }
 });
