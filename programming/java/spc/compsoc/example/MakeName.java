@@ -17,7 +17,7 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.colin.utils;
+package spc.compsoc.example;
 
 import java.util.ArrayList;
 import java.util.List;
