@@ -12,49 +12,49 @@ public:
 	Vector2D(double x, double y) : x(x), y(y) {}
 	Vector2D(const Vector2D& v) : x(v.x), y(v.y) {}
 
-	Vector2D& operator=(const Vector2D& v)
+	Vector2D& operator=(const Vector2D v)
 	{
 		x = v.x;
 		y = v.y;
 		return *this;
 	}
 
-	Vector2D operator+(Vector2D& v)
+	Vector2D operator+(Vector2D v)
 	{
 		return Vector2D(x + v.x, y + v.y);
 	}
-	Vector2D operator-(Vector2D& v)
+	Vector2D operator-(Vector2D v)
 	{
 		return Vector2D(x - v.x, y - v.y);
 	}
-	Vector2D operator*(Vector2D& v)
+	Vector2D operator*(Vector2D v)
 	{
 		return Vector2D(x * v.x, y * v.y);
 	}
-	Vector2D operator/(Vector2D& v)
+	Vector2D operator/(Vector2D v)
 	{
 		return Vector2D(x / v.x, y / v.y);
 	}
 
-	Vector2D& operator+=(Vector2D& v)
+	Vector2D& operator+=(Vector2D v)
 	{
 		x += v.x;
 		y += v.y;
 		return *this;
 	}
-	Vector2D& operator-=(Vector2D& v)
+	Vector2D& operator-=(Vector2D v)
 	{
 		x -= v.x;
 		y -= v.y;
 		return *this;
 	}
-	Vector2D& operator*=(Vector2D& v)
+	Vector2D& operator*=(Vector2D v)
 	{
 		x *= v.x;
 		y *= v.y;
 		return *this;
 	}
-	Vector2D& operator/=(Vector2D& v)
+	Vector2D& operator/=(Vector2D v)
 	{
 		x /= v.x;
 		y /= v.y;
@@ -104,13 +104,13 @@ public:
 		return *this;
 	}
 
-	void Set(double x, double y) 
+	void Set(double x, double y)
 	{
 		this->x = x;
 		this->y = y;
 	}
 
-	void Rotate(double deg) 
+	void Rotate(double deg)
 	{
 		double theta = deg / 180.0 * M_PI;
 		double c = cos(theta);
@@ -121,7 +121,7 @@ public:
 		y = ty;
 	}
 
-	Vector2D& Normalize() 
+	Vector2D& Normalize()
 	{
 		if (Magnitude() == 0) return *this;
 		*this *= (1.0 / Magnitude());
@@ -133,7 +133,7 @@ public:
 		return Vector2D(y, -x);
 	}
 
-	double Distance(Vector2D v) const 
+	double Distance(Vector2D v) const
 	{
 		Vector2D d(v.x - x, v.y - y);
 		return d.Magnitude();
@@ -143,7 +143,7 @@ public:
 	{
 		return x * x + y * y;
 	}
-	double Magnitude() const 
+	double Magnitude() const
 	{
 		return std::sqrt(SqrMagnitude());
 	}
