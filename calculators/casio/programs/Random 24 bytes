@@ -1,4 +1,6 @@
 ?→A:?→B:                                        //A is the lower limit. B is the upper limit.
-Fix 0:While 1:Rnd(B-A)Ran#+A◢WhileEnd
+Fix 0:While 1:Rnd(B-A)Ran#+A◢WhileEnd          //unconditional loop.
 
 //Random an integer in the range of A and B
+just press on to end prog. 
+RMB TO CHANGE THE SETUP BACK TO Norm 1 or Norm 2.
