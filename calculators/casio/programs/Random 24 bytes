@@ -1,0 +1,4 @@
+?→A:?→B:                                        //A is the lower limit. B is the upper limit.
+Fix 0:While 1:Rnd(B-A)Ran#+A◢WhileEnd
+
+//Random an integer in the range of A and B
