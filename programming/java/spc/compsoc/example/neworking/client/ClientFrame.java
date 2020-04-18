@@ -1,4 +1,4 @@
-package com.colin.networking.client;
+package spc.compsoc.example;
 
 import javax.swing.*;
 import java.io.*;
