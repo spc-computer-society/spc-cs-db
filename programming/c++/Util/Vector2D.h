@@ -186,6 +186,34 @@ public:
 		return std::sqrt(SqrMagnitude());
 	}
 
+	static Vector2D SplitComponents(double m, double deg, int quadrant = 1)
+	{
+		double theta = deg / 180.0 * M_PI;
+
+		Vector2D quadSign;
+		switch(quadrant)
+		{
+			case 1:
+				quadSign = Vector2D(1, 1);
+				break;
+			case 2:
+				quadSign = Vector2D(-1, 1);
+				break;
+			case 3:
+				quadSign = Vector2D(-1, -1);
+				break;
+			case 4:
+				quadSign = Vector2D(1, -1);
+				break;
+			default:
+				break;
+		}
+
+		double c = m * cos(theta);
+		double s = m * sin(theta);
+		return Vector2D(c, s) * quadSign;
+	}
+
 	static double Dot(const Vector2D& v1, const Vector2D& v2)
 	{
 		return v1.x * v2.x + v1.y * v2.y;
