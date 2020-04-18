@@ -15,49 +15,49 @@ public:
 	Vector2D(double x, double y) : x(x), y(y) {}
 	Vector2D(const Vector2D& v) : x(v.x), y(v.y) {}
 
-	Vector2D& operator=(const Vector2D v)
+	Vector2D& operator=(const Vector2D& v)
 	{
 		x = v.x;
 		y = v.y;
 		return *this;
 	}
 
-	Vector2D operator+(Vector2D v)
+	Vector2D operator+(const Vector2D& v)
 	{
 		return Vector2D(x + v.x, y + v.y);
 	}
-	Vector2D operator-(Vector2D v)
+	Vector2D operator-(const Vector2D& v)
 	{
 		return Vector2D(x - v.x, y - v.y);
 	}
-	Vector2D operator*(Vector2D v)
+	Vector2D operator*(const Vector2D& v)
 	{
 		return Vector2D(x * v.x, y * v.y);
 	}
-	Vector2D operator/(Vector2D v)
+	Vector2D operator/(const Vector2D& v)
 	{
 		return Vector2D(x / v.x, y / v.y);
 	}
 
-	Vector2D& operator+=(Vector2D v)
+	Vector2D& operator+=(const Vector2D& v)
 	{
 		x += v.x;
 		y += v.y;
 		return *this;
 	}
-	Vector2D& operator-=(Vector2D v)
+	Vector2D& operator-=(const Vector2D& v)
 	{
 		x -= v.x;
 		y -= v.y;
 		return *this;
 	}
-	Vector2D& operator*=(Vector2D v)
+	Vector2D& operator*=(const Vector2D& v)
 	{
 		x *= v.x;
 		y *= v.y;
 		return *this;
 	}
-	Vector2D& operator/=(Vector2D v)
+	Vector2D& operator/=(const Vector2D& v)
 	{
 		x /= v.x;
 		y /= v.y;
@@ -107,6 +107,33 @@ public:
 		return *this;
 	}
 
+    Vector2D& operator++()
+    {
+        x += 1.0;
+        y += 1.0;
+        return *this;
+    }
+    Vector2D& operator--()
+    {
+        x -= 1.0;
+        y -= 1.0;
+        return *this;
+    }
+    Vector2D operator++(int)
+    {
+        Vector2D tmp(x, y);
+        x += 1.0;
+        y += 1.0;
+        return tmp;
+    }
+    Vector2D operator--(int)
+    {
+        Vector2D tmp(x, y);
+        x -= 1.0;
+        y -= 1.0;
+        return tmp;
+    }
+
 	void Set(double x, double y)
 	{
 		this->x = x;
@@ -136,7 +163,7 @@ public:
 		return Vector2D(y, -x);
 	}
 
-	double Distance(Vector2D v) const
+	double Distance(const Vector2D& v) const
 	{
 		Vector2D d(v.x - x, v.y - y);
 		return d.Magnitude();
@@ -151,11 +178,11 @@ public:
 		return std::sqrt(SqrMagnitude());
 	}
 
-	static double Dot(Vector2D v1, Vector2D v2)
+	static double Dot(const Vector2D& v1, const Vector2D& v2)
 	{
 		return v1.x * v2.x + v1.y * v2.y;
 	}
-	static double cross(Vector2D v1, Vector2D v2)
+	static double cross(const Vector2D& v1, const Vector2D& v2)
 	{
 		return (v1.x * v2.y) - (v1.y * v2.x);
 	}
