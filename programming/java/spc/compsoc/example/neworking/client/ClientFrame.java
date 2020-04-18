@@ -1,4 +1,4 @@
-package spc.compsoc.example;
+package spc.compsoc.example.networking.client;
 
 import javax.swing.*;
 import java.io.*;
