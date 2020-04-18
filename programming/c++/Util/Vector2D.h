@@ -81,7 +81,6 @@ public:
 		return Vector2D(x / s, y / s);
 	}
 
-
 	Vector2D& operator+=(double s)
 	{
 		x += s;
@@ -133,6 +132,15 @@ public:
         y -= 1.0;
         return tmp;
     }
+
+	friend bool operator==(const Vector2D& v1, const Vector2D& v2)
+	{
+		return v1.x == v2.x && v1.y == v2.y;
+	}
+	friend bool operator!=(const Vector2D& v1, const Vector2D& v2)
+	{
+		return !(v1.x == v2.x && v1.y == v2.y);
+	}
 
 	void Set(double x, double y)
 	{
