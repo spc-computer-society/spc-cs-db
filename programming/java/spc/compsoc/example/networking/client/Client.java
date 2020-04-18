@@ -1,4 +1,4 @@
-package spc.compsoc.example.networking
+package spc.compsoc.example.networking.client;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
