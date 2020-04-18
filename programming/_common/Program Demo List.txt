@@ -7,3 +7,4 @@
 7. Comments - comment line and comment block
 8. Classes (if applicable) - A sample class to show OOP syntax
 9. Looping - Demonstrate what your language is special in terms of loops
+10. CSVParser - Write a CSV parser
