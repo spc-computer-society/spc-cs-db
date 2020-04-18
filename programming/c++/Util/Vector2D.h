@@ -186,39 +186,67 @@ public:
 		return std::sqrt(SqrMagnitude());
 	}
 
+	int Quadrant() const
+	{
+		if (x > 0)
+		{
+			if (y > 0)
+			{
+				return 1;
+			}
+			else
+			{
+				return 4;
+			}
+		}
+		else 
+		{
+			if (y > 0)
+			{
+				return 2;
+			}
+			else
+			{
+				return 3;
+			}
+		}
+	}
+	static Vector2D ReQuadrant(int quadrant)
+	{
+		switch(quadrant)
+		{
+			case 1:
+				return Vector2D(1, 1);
+				break;
+			case 2:
+				return Vector2D(-1, 1);
+				break;
+			case 3:
+				return Vector2D(-1, -1);
+				break;
+			case 4:
+				return Vector2D(1, -1);
+				break;
+			default:
+				return Vector2D::Zero();
+				break;
+		}
+	}
+
 	static Vector2D SplitComponents(double m, double deg, int quadrant = 1)
 	{
 		double theta = deg / 180.0 * M_PI;
 
-		Vector2D quadSign;
-		switch(quadrant)
-		{
-			case 1:
-				quadSign = Vector2D(1, 1);
-				break;
-			case 2:
-				quadSign = Vector2D(-1, 1);
-				break;
-			case 3:
-				quadSign = Vector2D(-1, -1);
-				break;
-			case 4:
-				quadSign = Vector2D(1, -1);
-				break;
-			default:
-				break;
-		}
-
 		double c = m * cos(theta);
 		double s = m * sin(theta);
-		return Vector2D(c, s) * quadSign;
+		return Vector2D(c, s) * ReQuadrant(quadrant);
 	}
 
 	static double Dot(const Vector2D& v1, const Vector2D& v2)
 	{
 		return v1.x * v2.x + v1.y * v2.y;
 	}
-	static double cross(const Vector2D& v1, const Vector2D& v2)
+	static double Cross(const Vector2D& v1, const Vector2D& v2)
 	{
 		return (v1.x * v2.y) - (v1.y * v2.x);
 	}
