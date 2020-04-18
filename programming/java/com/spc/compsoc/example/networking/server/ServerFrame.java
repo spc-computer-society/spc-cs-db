@@ -1,4 +1,4 @@
-package com.colin.networking.server;
+package spc.compsoc.example.networking,server;
 
 import javax.swing.*;
 import java.io.*;
