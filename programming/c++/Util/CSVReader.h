@@ -27,7 +27,7 @@ public:
             for (int x = 0; x < col; ++x)
             {
                 char delimiter = ',';
-				if (!endLineComma && x == col - 1) delimiter = '\n';
+		if (!endLineComma && x == col - 1) delimiter = '\n';
 
                 csvFile.get(cword, 256, ',');
                 csvFile.ignore();
