@@ -12,7 +12,7 @@ private:
 
 public:
 
-    CSVReader(const char* path, int row, int col)
+    CSVReader(const char* path, int row, int col, bool endLineComma = false)
     {
         values.clear();
 
@@ -26,11 +26,14 @@ public:
 
             for (int x = 0; x < col; ++x)
             {
+                char delimiter = ',';
+				if (!endLineComma && x == col - 1) delimiter = '\n';
+
                 csvFile.get(cword, 256, ',');
                 csvFile.ignore();
                 word.push_back(std::string(cword));
             }
-            csvFile.ignore();
+            if (endLineComma) csvFile.ignore();
             values.push_back(word);
         }
 
