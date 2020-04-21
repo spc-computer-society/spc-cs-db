@@ -178,13 +178,21 @@ public:
 		return d.Magnitude();
 	}
 
-	T SqrMagnitude() const
+	double SqrMagnitude() const
 	{
 		return x * x + y * y;
 	}
-	T Magnitude() const
+	double Magnitude() const
 	{
 		return std::sqrt(SqrMagnitude());
+	}
+
+	double Degree(bool flipYAxis = false)
+	{
+		if (flipYAxis) this->y *= -1;
+		double degree = atan(this->x / this->y) * 180 / M_PI;
+		if (this->y < 0) degree -= 180;
+		return degree;
 	}
 
 	int Quadrant() const
