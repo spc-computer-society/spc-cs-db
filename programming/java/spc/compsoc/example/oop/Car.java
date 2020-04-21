@@ -15,18 +15,19 @@
  *     You should have received a copy of the GNU General Public License
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-package spc.compsoc.networking.chatroom.client;
+package spc.compsoc.example.oop;
 
-import javax.swing.*;
-import javax.swing.plaf.nimbus.NimbusLookAndFeel;
-
-public class Client {
-    public static void main(String[] args){
-        try {
-            UIManager.setLookAndFeel(new NimbusLookAndFeel());
-        } catch (UnsupportedLookAndFeelException e) {
-            e.printStackTrace();
-        }
-        new LoginFrame();
-    }
+public class Car{
+  private String name;
+  private String colour;
+  public Car(String name,String colour){
+    this.name = name;
+    this.colour = colour;
+  }
+  public String getName(){
+    return name;
+  }
+  public String getColour(){
+    return colour;
+  }
 }

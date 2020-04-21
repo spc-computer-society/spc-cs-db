@@ -1,5 +1,5 @@
 /*
- *     SPC-CS-DB
+ *     Comp-Soc-DB
  *     Copyright (C) 2020  Colin Chow
  *
  *     This program is free software: you can redistribute it and/or modify
@@ -16,7 +16,7 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.colin.games.uno.api.cards;
+package spc.compsoc.example.oop;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -38,10 +38,6 @@ public class NumberCard extends AbstractCard implements Card {
             throw new IllegalArgumentException("NONE initialized.");
         }
         name = number + Card.getColourString(c);
-    }
-
-    public NumberCard(String s){
-        super(s);
     }
     @Override
     public boolean isFunctional() {
@@ -70,10 +66,5 @@ public class NumberCard extends AbstractCard implements Card {
     @Override
     public String saveForm() {
         return Cards.getDefaultSaveForm(this);
-    }
-
-    @Override
-    protected String generateName(String[] tokens) {
-        return colour.getName() + " " + number;
     }
 }

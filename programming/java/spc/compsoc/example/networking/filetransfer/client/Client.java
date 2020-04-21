@@ -15,18 +15,14 @@
  *     You should have received a copy of the GNU General Public License
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-package spc.compsoc.networking.chatroom.client;
+package spc.compsoc.example.networking.filetransfer.client;
 
 import javax.swing.*;
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 
 public class Client {
-    public static void main(String[] args){
-        try {
-            UIManager.setLookAndFeel(new NimbusLookAndFeel());
-        } catch (UnsupportedLookAndFeelException e) {
-            e.printStackTrace();
-        }
-        new LoginFrame();
+    public static void main(String[] args) throws UnsupportedLookAndFeelException {
+       UIManager.setLookAndFeel(new NimbusLookAndFeel());
+        new ClientFrame();
     }
 }

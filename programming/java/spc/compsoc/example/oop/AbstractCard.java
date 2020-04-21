@@ -1,5 +1,5 @@
 /*
- *     SPC-CS-DB
+ *     Comp-Soc-DB
  *     Copyright (C) 2020  Colin Chow
  *
  *     This program is free software: you can redistribute it and/or modify
@@ -16,16 +16,12 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.colin.games.uno.api.cards;
+package spc.compsoc.example.oop;
 
 import java.util.Objects;
 
 /**
  * <p>Basic implementation of Card interface.</p>
- * Implementation Specifications:
- * All subclasses of this class should include a public static final field
- * of type List{@literal <Subclass>} named defaults to be loaded by the loadDefaultMH()
- * private method of {@link com.colin.games.uno.api.Deck Deck}.
  * @author Colin
  */
 public abstract class AbstractCard implements Card {
@@ -37,19 +33,6 @@ public abstract class AbstractCard implements Card {
         this.number = number;
     }
 
-    /**
-     * Constructs a new card from the {@link Card#saveForm() save format} specified.
-     * All subclasses are <b> strongly recommended </b> to implement this constructor.
-     * Otherwise, improperly constructed cards may result as this implementation has no 
-     * knowledge of other information of other subclasses.
-     * @param loadFrom The saved form to load the card from
-     */
-    public AbstractCard(String loadFrom){
-        String[] tokens = loadFrom.split(",");
-        colour = Colour.convertFromString(tokens[1]);
-        number = Integer.parseInt(tokens[2]);
-        name = generateName(tokens);
-    }
     @Override
     public boolean equals(Object other){
         if(!(other instanceof AbstractCard)){
@@ -99,11 +82,4 @@ public abstract class AbstractCard implements Card {
         }
         return numCompare;
     }
-
-    /**
-     * Generates a name according to the specified loading form at {@link Card#saveForm() loaded form} of this card.
-     * @param tokens The tokens to generate the name of the card from
-     * @return The name of the card
-     */
-    protected abstract String generateName(String[] tokens);
 }
