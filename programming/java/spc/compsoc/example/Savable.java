@@ -1,5 +1,5 @@
 /*
- *     SPC-CS-DB
+ *     Comp-Soc-DB
  *     Copyright (C) 2020  Colin Chow
  *
  *     This program is free software: you can redistribute it and/or modify
@@ -16,13 +16,12 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.colin.games.uno.api;
+package spc.compsoc.example.oop;
 
 /**
  * The interface representing that this object is savable.
  * @author Colin
  */
-@FunctionalInterface /*Not that it helps anyone*/
 public interface Savable {
 
     /**
