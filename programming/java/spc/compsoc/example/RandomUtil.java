@@ -79,14 +79,4 @@ public class RandomUtil {
         }
         return SRC.nextInt(upper);
     }
-    /**
-     * Facilitates testing. Not used.
-     */
-    static void resetRNG(long seed){
-        if(SRC == null){
-            SRC = new Random(seed);
-        }else{
-            SRC.setSeed(seed);
-        }
-    }
 }
