@@ -6,182 +6,183 @@
 #define M_PI 3.14159265358979323846
 #endif
 
-class Vector2D {
+template <typename T>
+class Vec2 {
 public:
 
-	double x, y;
+	T x, y;
 
-	Vector2D() :x(0), y(0) {}
-	Vector2D(double x, double y) : x(x), y(y) {}
-	Vector2D(const Vector2D& v) : x(v.x), y(v.y) {}
+	Vec2() :x(0), y(0) {}
+	Vec2(T x, T y) : x(x), y(y) {}
+	Vec2(const Vec2& v) : x(v.x), y(v.y) {}
 
-	Vector2D& operator=(const Vector2D& v)
+	Vec2& operator=(const Vec2& v)
 	{
 		x = v.x;
 		y = v.y;
 		return *this;
 	}
 
-	Vector2D operator+(const Vector2D& v)
+	Vec2 operator+(const Vec2& v)
 	{
-		return Vector2D(x + v.x, y + v.y);
+		return Vec2(x + v.x, y + v.y);
 	}
-	Vector2D operator-(const Vector2D& v)
+	Vec2 operator-(const Vec2& v)
 	{
-		return Vector2D(x - v.x, y - v.y);
+		return Vec2(x - v.x, y - v.y);
 	}
-	Vector2D operator*(const Vector2D& v)
+	Vec2 operator*(const Vec2& v)
 	{
-		return Vector2D(x * v.x, y * v.y);
+		return Vec2(x * v.x, y * v.y);
 	}
-	Vector2D operator/(const Vector2D& v)
+	Vec2 operator/(const Vec2& v)
 	{
-		return Vector2D(x / v.x, y / v.y);
+		return Vec2(x / v.x, y / v.y);
 	}
 
-	Vector2D& operator+=(const Vector2D& v)
+	Vec2& operator+=(const Vec2& v)
 	{
 		x += v.x;
 		y += v.y;
 		return *this;
 	}
-	Vector2D& operator-=(const Vector2D& v)
+	Vec2& operator-=(const Vec2& v)
 	{
 		x -= v.x;
 		y -= v.y;
 		return *this;
 	}
-	Vector2D& operator*=(const Vector2D& v)
+	Vec2& operator*=(const Vec2& v)
 	{
 		x *= v.x;
 		y *= v.y;
 		return *this;
 	}
-	Vector2D& operator/=(const Vector2D& v)
+	Vec2& operator/=(const Vec2& v)
 	{
 		x /= v.x;
 		y /= v.y;
 		return *this;
 	}
 
-	Vector2D operator+(double s)
+	Vec2 operator+(T s)
 	{
-		return Vector2D(x + s, y + s);
+		return Vec2(x + s, y + s);
 	}
-	Vector2D operator-(double s)
+	Vec2 operator-(T s)
 	{
-		return Vector2D(x - s, y - s);
+		return Vec2(x - s, y - s);
 	}
-	Vector2D operator*(double s)
+	Vec2 operator*(T s)
 	{
-		return Vector2D(x * s, y * s);
+		return Vec2(x * s, y * s);
 	}
-	Vector2D operator/(double s)
+	Vec2 operator/(T s)
 	{
-		return Vector2D(x / s, y / s);
+		return Vec2(x / s, y / s);
 	}
 
-	Vector2D& operator+=(double s)
+	Vec2& operator+=(T s)
 	{
 		x += s;
 		y += s;
 		return *this;
 	}
-	Vector2D& operator-=(double s)
+	Vec2& operator-=(T s)
 	{
 		x -= s;
 		y -= s;
 		return *this;
 	}
-	Vector2D& operator*=(double s)
+	Vec2& operator*=(T s)
 	{
 		x *= s;
 		y *= s;
 		return *this;
 	}
-	Vector2D& operator/=(double s)
+	Vec2& operator/=(T s)
 	{
 		x /= s;
 		y /= s;
 		return *this;
 	}
 
-    Vector2D& operator++()
-    {
-        x += 1.0;
-        y += 1.0;
-        return *this;
-    }
-    Vector2D& operator--()
-    {
-        x -= 1.0;
-        y -= 1.0;
-        return *this;
-    }
-    Vector2D operator++(int)
-    {
-        Vector2D tmp(x, y);
-        x += 1.0;
-        y += 1.0;
-        return tmp;
-    }
-    Vector2D operator--(int)
-    {
-        Vector2D tmp(x, y);
-        x -= 1.0;
-        y -= 1.0;
-        return tmp;
-    }
+	Vec2& operator++()
+	{
+		x += 1.0;
+		y += 1.0;
+		return *this;
+	}
+	Vec2& operator--()
+	{
+		x -= 1.0;
+		y -= 1.0;
+		return *this;
+	}
+	Vec2 operator++(int)
+	{
+		Vec2 tmp(x, y);
+		x += 1.0;
+		y += 1.0;
+		return tmp;
+	}
+	Vec2 operator--(int)
+	{
+		Vec2 tmp(x, y);
+		x -= 1.0;
+		y -= 1.0;
+		return tmp;
+	}
 
-	friend bool operator==(const Vector2D& v1, const Vector2D& v2)
+	friend bool operator==(const Vec2& v1, const Vec2& v2)
 	{
 		return v1.x == v2.x && v1.y == v2.y;
 	}
-	friend bool operator!=(const Vector2D& v1, const Vector2D& v2)
+	friend bool operator!=(const Vec2& v1, const Vec2& v2)
 	{
 		return !(v1.x == v2.x && v1.y == v2.y);
 	}
 
-	void Set(double x, double y)
+	void Set(T x, T y)
 	{
 		this->x = x;
 		this->y = y;
 	}
 
-	void Rotate(double deg)
+	void Rotate(T deg)
 	{
-		double theta = deg / 180.0 * M_PI;
-		double c = cos(theta);
-		double s = sin(theta);
-		double tx = x * c - y * s;
-		double ty = x * s + y * c;
+		T theta = deg / 180.0 * M_PI;
+		T c = cos(theta);
+		T s = sin(theta);
+		T tx = x * c - y * s;
+		T ty = x * s + y * c;
 		x = tx;
 		y = ty;
 	}
 
-	Vector2D& Normalize()
+	Vec2& Normalize()
 	{
 		if (Magnitude() == 0) return *this;
 		*this *= (1.0 / Magnitude());
 		return *this;
 	}
 
-	Vector2D Ortho() const
+	Vec2 Ortho() const
 	{
-		return Vector2D(y, -x);
+		return Vec2(y, -x);
 	}
 
-	double Distance(const Vector2D& v) const
+	T Distance(const Vec2& v) const
 	{
-		Vector2D d(v.x - x, v.y - y);
+		Vec2 d(v.x - x, v.y - y);
 		return d.Magnitude();
 	}
 
-	double SqrMagnitude() const
+	T SqrMagnitude() const
 	{
 		return x * x + y * y;
 	}
-	double Magnitude() const
+	T Magnitude() const
 	{
 		return std::sqrt(SqrMagnitude());
 	}
@@ -199,7 +200,7 @@ public:
 				return 4;
 			}
 		}
-		else 
+		else
 		{
 			if (y > 0)
 			{
@@ -211,68 +212,72 @@ public:
 			}
 		}
 	}
-	static Vector2D ReQuadrant(int quadrant)
+	static Vec2 ReQuadrant(int quadrant)
 	{
-		switch(quadrant)
+		switch (quadrant)
 		{
 			case 1:
-				return Vector2D(1, 1);
+				return Vec2(1, 1);
 				break;
 			case 2:
-				return Vector2D(-1, 1);
+				return Vec2(-1, 1);
 				break;
 			case 3:
-				return Vector2D(-1, -1);
+				return Vec2(-1, -1);
 				break;
 			case 4:
-				return Vector2D(1, -1);
+				return Vec2(1, -1);
 				break;
 			default:
-				return Vector2D::Zero();
+				return Vec2::Zero();
 				break;
 		}
 	}
 
-	static Vector2D SplitComponents(double m, double deg, int quadrant = 1)
+	static Vec2 SplitComponents(T m, T deg, int quadrant = 1)
 	{
-		double theta = deg / 180.0 * M_PI;
+		T theta = deg / 180.0 * M_PI;
 
-		double c = m * cos(theta);
-		double s = m * sin(theta);
-		return Vector2D(c, s) * ReQuadrant(quadrant);
+		T c = m * cos(theta);
+		T s = m * sin(theta);
+		return Vec2(c, s) * ReQuadrant(quadrant);
 	}
 
-	static double Dot(const Vector2D& v1, const Vector2D& v2)
+	static T Dot(const Vec2& v1, const Vec2& v2)
 	{
 		return v1.x * v2.x + v1.y * v2.y;
 	}
-	static double Cross(const Vector2D& v1, const Vector2D& v2)
+	static T Cross(const Vec2& v1, const Vec2& v2)
 	{
 		return (v1.x * v2.y) - (v1.y * v2.x);
 	}
 
-	static Vector2D One()
+	static Vec2 One()
 	{
-		return Vector2D(1, 1);
+		return Vec2(1, 1);
 	}
-	static Vector2D Zero()
+	static Vec2 Zero()
 	{
-		return Vector2D(0, 0);
+		return Vec2(0, 0);
 	}
-	static Vector2D Up()
+	static Vec2 Up()
 	{
-		return Vector2D(0, 1);
+		return Vec2(0, 1);
 	}
-	static Vector2D Down()
+	static Vec2 Down()
 	{
-		return Vector2D(0, -1);
+		return Vec2(0, -1);
 	}
-	static Vector2D Left()
+	static Vec2 Left()
 	{
-		return Vector2D(-1, 0);
+		return Vec2(-1, 0);
 	}
-	static Vector2D Right()
+	static Vec2 Right()
 	{
-		return Vector2D(1, 0);
+		return Vec2(1, 0);
 	}
 };
+
+typedef Vec2<double> Vector2D;
+typedef Vec2<float> Vector2Df;
+typedef Vec2<int> Vector2Di;
