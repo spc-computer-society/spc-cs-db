@@ -1,5 +1,5 @@
 /*
- *     SPC-CS-DB
+ *     Comp-Soc-DB
  *     Copyright (C) 2020  Colin Chow
  *
  *     This program is free software: you can redistribute it and/or modify
@@ -16,10 +16,7 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.colin.games.uno.api.cards;
-
-import com.colin.games.uno.api.Game;
-import com.colin.games.uno.api.Savable;
+package spc.compsoc.example.oop;
 
 import java.util.Optional;
 
@@ -37,7 +34,7 @@ public interface Card extends Comparable<Card>,Savable {
      * @param context The game in which this card is played
      * @return The result generated
      */
-    default <T> Optional<T> onUse(Game context){
+    default <T> Optional<T> onUse(){
         return Optional.empty();
     }
 
@@ -214,7 +211,6 @@ public interface Card extends Comparable<Card>,Savable {
      * </pre>
      * @return The save form of this card to be written to a save file
      */
-    @Override
     String saveForm();
 
     /**
