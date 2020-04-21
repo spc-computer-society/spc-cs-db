@@ -1,5 +1,5 @@
 /*
- *     SBA-ICT
+ *     Comp-Soc-DB
  *     Copyright (C) 2020  Colin Chow
  *
  *     This program is free software: you can redistribute it and/or modify
@@ -16,7 +16,7 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.colin.utils;
+package spc.compsoc.example;
 
 import java.util.Random;
 
