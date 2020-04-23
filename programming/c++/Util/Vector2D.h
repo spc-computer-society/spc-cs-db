@@ -189,9 +189,16 @@ public:
 
 	double Degree(bool flipYAxis = false)
 	{
-		if (flipYAxis) this->y *= -1;
-		double degree = atan(this->x / this->y) * 180 / M_PI;
-		if (this->y < 0) degree -= 180;
+		T tmp = this->y;
+		if (flipYAxis) tmp *= -1;
+		double degree; 
+		if (tmp != 0) degree = atan(this->x / tmp) * 180 / M_PI;
+		else
+		{
+			degree = 90;
+			if (this->x < 0) degree *= -1;
+		}
+		if (tmp < 0 && flipYAxis) degree -= 180;
 		return degree;
 	}
 
