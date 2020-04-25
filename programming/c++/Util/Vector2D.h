@@ -191,7 +191,7 @@ public:
 	{
 		T tmp = this->y;
 		if (flipYAxis) tmp *= -1;
-		double degree; 
+		double degree;
 		if (tmp != 0) degree = atan(this->x / tmp) * 180 / M_PI;
 		else
 		{
@@ -247,6 +247,28 @@ public:
 				return Vec2::Zero();
 				break;
 		}
+	}
+	static Vec2 ReQuadrant(double deg, double zero = 0, bool anticlockwise = true)
+	{
+		double nDeg;
+
+		if (anticlockwise)
+		{
+			nDeg = deg - zero;
+		}
+		else
+		{
+			nDeg = zero - deg;
+		}
+
+		while (nDeg < 0) nDeg += 360;
+
+		nDeg = fmod(nDeg, 360);
+
+		if (nDeg >= 0 && nDeg < 90) return Vec2<T>(1, 1);
+		else if (nDeg >= 90 && nDeg < 180) return Vec2<T>(-1, 1);
+		else if (nDeg >= 180 && nDeg < 270) return Vec2<T>(-1, -1);
+		else if (nDeg >= 270 && nDeg < 360) return Vec2<T>(1, -1);
 	}
 
 	static Vec2 SplitComponents(T m, T deg, int quadrant = 1)
