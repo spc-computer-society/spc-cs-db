@@ -37,7 +37,7 @@ void initialize(){
 
 void ship(){
     int y,x,o=5,sh,i,e,number5=0,ko=4,x1,y1,k;
-    for(sh=0;sh<3;sh++){
+    for(sh=0;sh<4;sh++){
         printf("Please input coordinates of ship %d:\n",sh);
         scanf("%d,%d",&x,&y);
 
@@ -60,7 +60,7 @@ void ship(){
 
 
     printf("\nIt is player 2 turn to input");
-    for(number5=0;number5<3;number5++){
+    for(number5=0;number5<4;number5++){
       x1=rand()%5-3;
       y1=rand()%7;
         for(k=0;k<3;k++){
@@ -116,16 +116,16 @@ int main(){
     ship();
     initialize();
 
-    while(bot1<12|| bot2<12){
+    while(bot1<1200|| bot2<1200){
         inputs();
         initialize();
     }
-/*  if(bot1=){
-        printf("Player1 wins");
-    }
-    else{
-        printf("AI wins");
-    }*/
+if(bot1=1200){
+printf("Player1 wins");
+}
+else{
+printf("AI wins");
+}
     return 0;
 }
 
