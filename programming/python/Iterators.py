@@ -21,5 +21,5 @@ print(dictionary, type(dictionary))
 print(dictionary["apple"])
 print(dictionary[15])
 print(dictionary["item"][1])
-# This prints the value of key: item, which is a list.
+# This prints the value of key: item, which is a list. Yes, a list in a dictionary is possible, hence are all other iterator combinations. This is called nested.
 # The [1] prints the item with index(1) of the list
