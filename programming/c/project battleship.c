@@ -46,10 +46,10 @@ printf("Please input coordinates of ship %d:\n",sh);
 scanf("%d,%d",&x,&y);
 
 for(e=0;e<3;e++){
-  x=x+e;
-board[x][y]='X';
+board[e][y]='X';
 }
 }
+
 
 //for(sh=1;sh<5;sh++){
 //printf("Please input coordinates of ship %d:\n",sh);
@@ -63,13 +63,12 @@ board[x][y]='X';
 
 
 
-printf("\nIt is player 2 turn to input\n");
+printf("\nIt is player 2 turn to input\n\n");
 for(number5=0;number5<4;number5++){
       x1=rand()%5-3;
       y1=rand()%7;
        for(k=0;k<3;k++){
-           x1=x1+k;
-          board3[x1][y1]='X';
+          board3[k][y1]='X';
        }
 
 
@@ -118,10 +117,6 @@ void inputs(){
 
 
 
-
-
-
-
 int main(){
 int player,input,k,bot=0;
 
@@ -142,9 +137,3 @@ printf("AI wins");
 
 return 0;
 }
-
-
-
-
-
-         
