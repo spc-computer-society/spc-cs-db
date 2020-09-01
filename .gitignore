@@ -1,4 +1,4 @@
-/.gitignore
+.idea/
 .vs/VSWorkspaceState.json
 .vs/spc-cs-db/v16/Browse.VC.db
 .vs/spc-cs-db/v16/.suo
