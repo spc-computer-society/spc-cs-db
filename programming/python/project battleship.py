@@ -49,12 +49,12 @@ class Insturctions(arcade.View):
                          anchor_x="center")
 
     def on_key_press(self, key, _modifiers):
-        if key == arcade.key.NUM_1:
+        if key in (arcade.key.NUM_1, arcade.key.KEY_1):
             game_view = Gameview()
             self.window.show_view(game_view)
-        elif key == arcade.key.NUM_2:
+        if key in (arcade.key.NUM_2, arcade.key.KEY_2):
             arcade.close_window()
-        elif key == arcade.key.NUM_3:
+        if key in (arcade.key.NUM_3, arcade.key.KEY_3):
             turn_screen = Turnview()
             self.window.show_view(turn_screen)
 
