@@ -228,7 +228,7 @@ class Gameview(arcade.View):
             self.window.show_view(end_screen)
             # arcade.close_window()
 
-    #  if grid2[row][column] == 2:
+    ##  if grid2[row][column] == 2:
     # grid2[row][column] == 3
     # wincon += 1 , add win condition
 
