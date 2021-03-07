@@ -4,7 +4,7 @@ int main()
 {
     bool b = true;
     int i = 59;
-    int l = 59l;
+    long int l = 59l;
     float f = 69.420f;
     double d = 69.420;
     char c = 'C';
