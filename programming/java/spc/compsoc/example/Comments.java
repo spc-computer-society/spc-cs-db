@@ -1,6 +1,6 @@
 package spc.compsoc.example;
 
-public class Comments{
+public class Comments {
   // Comments are ignored by the compiler
   // This is a single-line comment (starting with //)
 
