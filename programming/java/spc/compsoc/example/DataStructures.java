@@ -17,7 +17,7 @@ public class DataStructures {
     list.add(1);
     list.add(2);
      // Prints 1 and 2
-    for(int i : list) {
+    for (int i : list) {
       System.out.println(i);
     }
     List<Integer> sub = list.subList(1, list.size()); // Sublist only has 2 in it (equivalent to python [1:])
@@ -36,12 +36,12 @@ public class DataStructures {
     System.out.println(ids.entrySet().stream().mapToInt(ent -> ent.getValue()).sum()); // Returns sum of all ids
 
     // The Queue interface (ArrayBlockingQueue has a fixed size (5 here))
-    Queue<Long> l = new ArrayBlockingQueue<>(5);
+    Queue<Long> queue = new ArrayBlockingQueue<>(5);
     // Add elements to the queue (the `l` prefix denotes a long)
-    l.add(1l);
-    l.add(200l);
-    System.out.println(l.peek()); // Outputs 1, in queue = {1, 200} (Gets, but does not remove the first element)
-    System.out.println(l.poll()); // Outputs 1, in queue = {200} (Gets and removes the first element)
+    queue.add(1l);
+    queue.add(200l);
+    System.out.println(queue.peek()); // Outputs 1, in queue = {1, 200} (Gets, but does not remove the first element)
+    System.out.println(queue.poll()); // Outputs 1, in queue = {200} (Gets and removes the first element)
 
     // The Set interface
     Set<String> set = new HashSet<>();
