@@ -10,7 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class DataStructures {
-  public static void man(String[] args) {
+  public static void main(String[] args) {
     // The List interface
     List<Integer> list = new ArrayList<>();
     // Add elements to the list
